@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.apptimistiq.android.fitstreak">
+
+    <!--Need Activity Recognition permission to access the google fit api's data types -->
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+    <!--Need access to internet to communicate with Recipes API -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".FitApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FitStreak">
+        <activity
+            android:name="com.apptimistiq.android.fitstreak.authentication.AuthenticationActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.apptimistiq.android.fitstreak.main.MainActivity" />
+    </application>
+
+</manifest>
